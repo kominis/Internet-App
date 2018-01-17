@@ -25,7 +25,8 @@
 </nav>
 
 <div class="ui segment">
-<h3><center>Vehicle Recycle</center></h3>
+<h4><center>Vehicle Recycle</center></h4>
+<h3><center>Benefits</center></h4>
 </div>
 </body>
 </html>
