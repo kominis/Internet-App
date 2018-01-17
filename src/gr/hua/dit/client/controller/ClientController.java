@@ -71,7 +71,6 @@ public class ClientController {
 			String vPlate = (String) jsonObject.get("plate");
 			if(vPlate != null) {
 				model.addAttribute("plate", jsonObject.get("plate"));
-				model.addAttribute("model", jsonObject.get("model"));
 				model.addAttribute("vehicleCondition", jsonObject.get("vehicleCondition"));
 				return "certificate";
 			}else {
