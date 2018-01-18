@@ -20,9 +20,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ClientController {
 
 	public static final String userAgent = "Mozilla/5.0";
-
+	
+	@GetMapping("/homePage") 
+	public String homePage(Model model) {
+		model.addAttribute("pageTitle","Car Recycle");
+		return "homePage";	
+	}
+	
 	@GetMapping("/signIn")
-	public String signInPage() {
+	public String signInPage(Model model) {
+		model.addAttribute("pageTitle", "SignIn");
 		return "signIn";
 	}
 
@@ -52,7 +59,8 @@ public class ClientController {
 	}
 
 	@GetMapping("/progress")
-	public String carProgress() {
+	public String carProgress(Model model) {
+		model.addAttribute("pageTitle","Search for Vehicle");
 		return "progress";
 	}
 
@@ -72,6 +80,7 @@ public class ClientController {
 			if(vPlate != null) {
 				model.addAttribute("plate", jsonObject.get("plate"));
 				model.addAttribute("vehicleCondition", jsonObject.get("vehicleCondition"));
+				model.addAttribute("pageTitle","Certificate");
 				return "certificate";
 			}else {
 				return "redirect:/progress";
