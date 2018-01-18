@@ -20,6 +20,7 @@
 <title>${pageTitle}</title>
 </head>
 <body>
+
 	<nav class="ui fixed menu teal inverted navbar"> <a
 		href="${pageContext.request.contextPath}/progress" class="item">Vehicle
 		Progress</a> <a href="${pageContext.request.contextPath}/signIn"
